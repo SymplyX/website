@@ -44,7 +44,7 @@ export const Navbar = () => {
 				<NavbarBrand className="gap-3 max-w-fit pr-2">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Image src="/favicon.ico" alt="Symply Logo" width={50} height={50} />
-						<p className="font-bold text-inherit">Symply</p>
+						<p className="font-bold text-inherit">Symply&apos;</p>
 					</NextLink>
 				</NavbarBrand>
 			</NavbarContent>
