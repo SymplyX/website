@@ -44,7 +44,7 @@ export const Navbar = () => {
 				<NavbarBrand className="gap-3 max-w-fit pr-2">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Image src="/favicon.ico" alt="Symply Logo" width={50} height={50} />
-						<p className="font-bold text-inherit">Symply&apos;</p>
+						<p className="font-bold text-inherit">Symply</p>
 					</NextLink>
 				</NavbarBrand>
 			</NavbarContent>
@@ -76,7 +76,7 @@ export const Navbar = () => {
 							<Card className="col-span-12 sm:col-span-4 h-[300px]">
 								<CardHeader className="absolute z-10 top-1 flex-col !items-start">
 									<p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
-									<h4 className="text-white font-medium text-large">Symply's additions</h4>
+									<h4 className="text-white font-medium text-large">Symply&apos;s additions</h4>
 								</CardHeader>
 								<Image
 									removeWrapper
