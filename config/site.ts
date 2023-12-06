@@ -44,7 +44,7 @@ export const siteConfig = {
 		}
 	],
 	links: {
-		github: "https://github.com/nextui-org/nextui",
+		github: "https://github.com/SymplyX/Symply",
 		docs: "https://nextui-docs-v2.vercel.app",
 		discord: "https://discord.gg/9b6yyZKmH4",
     	sponsor: "https://patreon.com/symply"
