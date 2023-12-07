@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
 	name: "Symply",
-	description: "Make beautiful websites regardless of your design experience.",
+	description: "Create your customized server with Symply, a superior fork of PocketMine-MP, packed with fantastic additions !",
 	navItems: [
     {
       label: "Docs",
