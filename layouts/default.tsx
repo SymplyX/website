@@ -2,6 +2,9 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import { Head } from "./head";
 import {FaHeart} from "react-icons/fa";
+import Footer from "@/components/footer";
+import {Spacer} from "@nextui-org/react";
+import React from "react";
 
 export default function DefaultLayout({
 	children,
@@ -12,20 +15,11 @@ export default function DefaultLayout({
 		<div className="relative flex flex-col h-screen">
 			<Head />
 			<Navbar />
+			<Spacer y={68} />
 			<main className="container mx-auto max-w-7xl px-6 flex-grow">
 				{children}
 			</main>
-			<footer className="w-full flex items-center justify-center py-3">
-				<Link
-					isExternal
-					className="flex items-center gap-1 text-current"
-					href="https://github.com/AzaleeX"
-					title="Github AzaleeX"
-				>
-					<span className="text-default-600">Created by </span>
-					<p className="text-primary">Azalee</p> <FaHeart color="red"/>
-				</Link>
-			</footer>
+			<Footer />
 		</div>
 	);
 }

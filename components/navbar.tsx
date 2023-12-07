@@ -12,7 +12,7 @@ import {
 	NavbarMenuItem,
 	DropdownItem,
 	Image,
-	DropdownTrigger, DropdownMenu, Dropdown, cn, Card,
+	DropdownTrigger, DropdownMenu, Dropdown, cn, Card, Spacer,
 } from "@nextui-org/react";
 
 import { link as linkStyles } from "@nextui-org/theme";
