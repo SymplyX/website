@@ -15,7 +15,7 @@ export default function DefaultLayout({
 		<div className="relative flex flex-col h-screen">
 			<Head />
 			<Navbar />
-			<Spacer y={68} />
+			<Spacer y={64} />
 			<main className="container mx-auto max-w-7xl px-6 flex-grow">
 				{children}
 			</main>
