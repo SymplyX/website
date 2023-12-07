@@ -13,7 +13,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                     <div>
                         <div className="flex justify-start items-center gap-1">
-                            <Image src="/favicon.ico" alt="Symply Logo" width={50} height={50} />
+                            <img src="/favicon.ico" alt="Symply Logo" width={50} height={50} />
                             <p className="font-bold text-inherit">Symply</p>
                         </div>
 
