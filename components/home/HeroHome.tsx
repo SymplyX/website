@@ -17,7 +17,7 @@ export default function HeroHome() {
                 </h1>
 
                 <p className="max-w-3xl mx-auto mt-6 text-lg text-center text-gray-700 dark:text-white md:text-xl">
-                    Symply is still under development, including the site, so for the time being we're offering this page as a new update.
+                    Symply is still under development, including the site, so for the time being we&apos;re offering this page as a new update.
                 </p>
             </div>
         </section>
