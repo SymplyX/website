@@ -5,6 +5,7 @@ import {FaHeart} from "react-icons/fa";
 import Footer from "@/components/footer";
 import {Spacer} from "@nextui-org/react";
 import React from "react";
+import Cookie from "@/components/cookie";
 
 export default function DefaultLayout({
 	children,
@@ -19,6 +20,7 @@ export default function DefaultLayout({
 			<main className="container mx-auto max-w-7xl px-6 flex-grow">
 				{children}
 			</main>
+			<Cookie />
 			<Footer />
 		</div>
 	);
