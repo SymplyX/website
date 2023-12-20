@@ -1,11 +1,8 @@
-import { Navbar } from "@/components/navbar";
-import { Link } from "@nextui-org/link";
-import { Head } from "./head";
-import {FaHeart} from "react-icons/fa";
+import {Navbar} from "@/components/navbar";
+import {Head} from "./head";
 import Footer from "@/components/footer";
 import {Spacer} from "@nextui-org/react";
 import React from "react";
-import Cookie from "@/components/cookie";
 
 export default function DefaultLayout({
 	children,
@@ -20,7 +17,6 @@ export default function DefaultLayout({
 			<main className="container mx-auto max-w-7xl px-6 flex-grow">
 				{children}
 			</main>
-			<Cookie />
 			<Footer />
 		</div>
 	);

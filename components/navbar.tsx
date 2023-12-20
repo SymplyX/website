@@ -1,38 +1,31 @@
 import {
-	Button,
-	Kbd,
-	Link,
-	Input,
-	Navbar as NextUINavbar,
-	NavbarContent,
-	NavbarMenu,
-	NavbarMenuToggle,
-	NavbarBrand,
-	NavbarItem,
-	NavbarMenuItem,
-	DropdownItem,
-	Image,
-	DropdownTrigger, DropdownMenu, Dropdown, cn, Card, Spacer,
+    Button,
+    Card,
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownTrigger,
+    Image,
+    Link,
+    Navbar as NextUINavbar,
+    NavbarBrand,
+    NavbarContent,
+    NavbarItem,
+    NavbarMenu,
+    NavbarMenuItem,
+    NavbarMenuToggle,
 } from "@nextui-org/react";
 
-import { link as linkStyles } from "@nextui-org/theme";
+import {link as linkStyles} from "@nextui-org/theme";
 
-import { siteConfig } from "@/config/site";
+import {siteConfig} from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
 
-import {BiArrowToBottom, BiCheckDouble, BiChevronDown, BiCube} from "react-icons/bi";
+import {BiArrowToBottom, BiCube} from "react-icons/bi";
 
-import { ThemeSwitch } from "@/components/theme-switch";
-import {
-	TwitterIcon,
-	GithubIcon,
-	DiscordIcon,
-	HeartFilledIcon,
-	SearchIcon,
-} from "@/components/icons";
-
-import { Popover } from '@headlessui/react'
+import {ThemeSwitch} from "@/components/theme-switch";
+import {DiscordIcon, GithubIcon, HeartFilledIcon,} from "@/components/icons";
 
 import React from "react";
 import {CardHeader} from "@nextui-org/card";

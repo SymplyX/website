@@ -1,5 +1,3 @@
-import {siteConfig} from "@/config/site";
-
 export default function Cookie() {
     return (
         <section
