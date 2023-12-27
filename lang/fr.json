@@ -1,0 +1,14 @@
+{
+  "Home": {
+    "title": "Construisez votre",
+    "title-2": "Serveur",
+    "description": "Symply vous offre la simplicité ultime pour créer des serveurs uniques. Libérez votre créativité sans contraintes et bâtissez des mondes de jeu inoubliables en un clin d'œil.",
+    "download": "Télécharger",
+    "modal": {
+      "title": "Télécharger",
+      "description": "Vous êtes sur le point de télécharger Symply,\n notre application en version bêta conçue pour améliorer votre expérience Minecraft.\n Veuillez noter que Symply est actuellement en phase de test et que nous ne pouvons garantir le support pour tous les problèmes rencontrés sur vos serveurs Minecraft.\n En tant qu'équipe en phase de développement, nous vous invitons à utiliser Symply avec prudence et à comprendre que des erreurs peuvent survenir. Pour plus d'informations sur notre version bêta et pour signaler des problèmes, veuillez consulter notre documentation.",
+      "download": "Télécharger quand même",
+      "discord": "Aller sur le discord"
+    }
+  }
+}
