@@ -9,7 +9,7 @@ export const Head = () => {
 			<meta content={siteConfig.description} name="description"/>
 			<meta property="og:title" content={siteConfig.name}/>
 			<meta property="og:description" content={siteConfig.description}/>
-			<meta property="og:image" content="/favicon.ico"/>
+			<meta property="og:image" content="/logo.png"/>
 			<meta property="og:url" content="https://symplymc.com"/>
 			<meta name="twitter:card" content="summary_large_image"/>
 			<meta name="twitter:site" content="@SymplyMc"/>
