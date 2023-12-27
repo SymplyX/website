@@ -1,19 +1,19 @@
 import {
-    Button,
-    Card,
-    Dropdown,
-    DropdownItem,
-    DropdownMenu,
-    DropdownTrigger,
-    Image,
-    Link,
-    Navbar as NextUINavbar,
-    NavbarBrand,
-    NavbarContent,
-    NavbarItem,
-    NavbarMenu,
-    NavbarMenuItem,
-    NavbarMenuToggle,
+	Button,
+	Card,
+	Dropdown,
+	DropdownItem,
+	DropdownMenu,
+	DropdownTrigger,
+	Image,
+	Link,
+	Navbar as NextUINavbar,
+	NavbarBrand,
+	NavbarContent,
+	NavbarItem,
+	NavbarMenu,
+	NavbarMenuItem,
+	NavbarMenuToggle,
 } from "@nextui-org/react";
 
 import {link as linkStyles} from "@nextui-org/theme";
@@ -25,7 +25,7 @@ import clsx from "clsx";
 import {BiArrowToBottom, BiCube} from "react-icons/bi";
 
 import {ThemeSwitch} from "@/components/theme-switch";
-import {DiscordIcon, GithubIcon, HeartFilledIcon,} from "@/components/icons";
+import {DiscordIcon, GithubIcon, HeartFilledIcon} from "@/components/icons";
 
 import React from "react";
 import {CardHeader} from "@nextui-org/card";
@@ -42,7 +42,7 @@ export const Navbar = () => {
 				</NavbarBrand>
 			</NavbarContent>
 
-			<NavbarContent className="hidden sm:flex gap-2 justify-start" justify="center">
+			<NavbarContent className="hidden lg:flex gap-2 justify-start" justify="center">
 				<Dropdown className="mt-8">
 					<DropdownTrigger className="bg-transparent">
 						<Button
@@ -105,7 +105,7 @@ export const Navbar = () => {
 			</NavbarContent>
 
 			<NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
-				<NavbarItem className="hidden sm:flex gap-2">
+				<NavbarItem className="hidden sm:flex gap-3">
 					<Link isExternal href={siteConfig.links.discord}>
 						<DiscordIcon className="text-default-500" />
 					</Link>
@@ -116,18 +116,25 @@ export const Navbar = () => {
 				</NavbarItem>
 				<NavbarItem className="hidden sm:flex">
 					<Button
-						isExternal
+						isIconOnly
 						as={Link}
 						className="text-sm font-normal text-default-600 bg-default-100"
 						href={siteConfig.links.sponsor}
-						startContent={<HeartFilledIcon className="text-danger" />}
-						variant="flat"
+						variant="faded"
+						disableAnimation
 					>
+						<HeartFilledIcon className="text-danger" />
 					</Button>
+				</NavbarItem>
+				<NavbarItem className="lg:hidden sm:flex">
+					<NavbarMenuToggle />
 				</NavbarItem>
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+				<Link isExternal href={siteConfig.links.discord}>
+					<DiscordIcon className="text-default-500" />
+				</Link>
 				<Link isExternal href={siteConfig.links.github}>
 					<GithubIcon className="text-default-500" />
 				</Link>
@@ -137,34 +144,17 @@ export const Navbar = () => {
 
 			<NavbarMenu>
 				<div className="mx-4 mt-2 flex flex-col gap-2">
-					{siteConfig.navMenuItems.map((item, index) => (
-						<NavbarMenuItem key={`${item}-${index}`}>
+					{siteConfig.navItems.map((item) => (
+						<NavbarMenuItem key={item.href} className="">
 							<Link
-								color={
-									index === 2
-										? "primary"
-										: index === siteConfig.navMenuItems.length - 1
-											? "danger"
-											: "foreground"
-								}
+								color="foreground"
 								href="#"
-								size="lg"
 							>
 								{item.label}
 							</Link>
 						</NavbarMenuItem>
 					))}
 				</div>
-				<Button
-					isExternal
-					as={Link}
-					className="text-sm font-normal text-default-600 bg-default-100"
-					href={siteConfig.links.sponsor}
-					startContent={<HeartFilledIcon className="text-danger" />}
-					variant="flat"
-				>
-					Sponsor
-				</Button>
 			</NavbarMenu>
 		</NextUINavbar>
 	);

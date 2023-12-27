@@ -10,14 +10,14 @@ export default function DefaultLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<div className="relative flex flex-col h-screen">
-			<Head />
-			<Navbar />
-			<Spacer y={14} />
+		<div className="relative flex flex-col h-screen" >
+			<Head/>
+			<Navbar/>
+			<Spacer y={14}/>
 			<main className="container mx-auto max-w-7xl px-6 flex-grow">
 				{children}
 			</main>
-			<Footer />
+			<Footer/>
 		</div>
 	);
 }

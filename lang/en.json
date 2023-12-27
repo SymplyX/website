@@ -1,0 +1,14 @@
+{
+  "Home": {
+    "title": "Build your",
+    "title-2": "Server",
+    "description": "Symply offers the ultimate simplicity for creating unique servers. Unleash your creativity without constraints and build unforgettable game worlds in the blink of an eye.",
+    "download": "Download",
+    "modal": {
+      "title": "Download",
+      "description": "You are about to download Symply,\nour beta version application designed to enhance your Minecraft experience.\n\nPlease note that Symply is currently in a testing phase, and we cannot guarantee support\nfor all issues encountered on your Minecraft servers.\n\nAs a development team, we encourage you to use Symply cautiously and understand that errors may occur. For more\ninformation about our beta version and to report issues, please\nrefer to our documentation.",
+      "download": "Download Anyway",
+      "discord": "Go to the discord"
+    }
+  }
+}
