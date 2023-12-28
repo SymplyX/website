@@ -1,4 +1,8 @@
 {
+  "common": {
+    "fr": "Français",
+    "en": "Anglais"
+  },
   "Home": {
     "title": "Construisez votre",
     "title-2": "Serveur",
@@ -6,9 +10,19 @@
     "download": "Télécharger",
     "modal": {
       "title": "Télécharger",
-      "description": "Vous êtes sur le point de télécharger Symply,\n notre application en version bêta conçue pour améliorer votre expérience Minecraft.\n Veuillez noter que Symply est actuellement en phase de test et que nous ne pouvons garantir le support pour tous les problèmes rencontrés sur vos serveurs Minecraft.\n En tant qu'équipe en phase de développement, nous vous invitons à utiliser Symply avec prudence et à comprendre que des erreurs peuvent survenir. Pour plus d'informations sur notre version bêta et pour signaler des problèmes, veuillez consulter notre documentation.",
-      "download": "Télécharger quand même",
-      "discord": "Aller sur le discord"
+      "description": "<p>Vous êtes sur le point de télécharger Symply, notre application bêta conçue pour simplifier la création de serveurs Minecraft Bedrock.</p><skip></skip><p>En tant qu'équipe en phase de développement, nous vous invitons à utiliser Symply avec prudence et à comprendre que des erreurs peuvent survenir.</p><skip></skip><p> Pour plus d'informations sur notre version bêta et pour signaler des problèmes, veuillez consulter notre documentation. </p>",
+      "button-download": {
+        "title": "Téléchargez Symply",
+        "tooltip": "Vous devez confirmer avoir lu les informations ci-dessus pour pouvoir télécharger Symply."
+      }
+    },
+    "card": {
+      "title": "Avertissement",
+      "description": "Si vous rencontrez des problèmes sur vos serveurs Minecraft, notez que nous sommes en phase de test et ne pouvons garantir la résolution de tous les problèmes. Cependant, nous sommes là pour vous aider, donc n'hésitez pas à rejoindre notre serveur Discord si vous avez besoin d'assistance.",
+      "check": {
+        "no": "J'ai lu attentivement tout ce qui était nécessaire pour me tenir informé",
+        "yes": "J'ai confirmé"
+      }
     }
   }
 }

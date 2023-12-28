@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Symply",
-	description: "Create your customized server with Symply, a superior fork of PocketMine-MP, packed with fantastic additions !",
+	name: "Symply | Home",
+	description: "Symply is much more than just an enhanced version of PocketMine-MP. It's a platform brimming with exceptional innovations and add-ons for creating your own personalized Minecraft Bedrock server. With its advanced features, user-friendly interface and selection of fantastic add-ons, Symply gives you the power to shape a unique and captivating gaming environment for you and your players.",
 	navItems: [
     {
       label: "Docs",

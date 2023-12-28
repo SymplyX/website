@@ -24,15 +24,15 @@ import clsx from "clsx";
 
 import {BiArrowToBottom, BiCube} from "react-icons/bi";
 
-import {ThemeSwitch} from "@/components/theme-switch";
 import {DiscordIcon, GithubIcon, HeartFilledIcon} from "@/components/icons";
 
 import React from "react";
 import {CardHeader} from "@nextui-org/card";
+import Switcherlang from "@/components/switcherlang";
 
 export const Navbar = () => {
 	return (
-		<NextUINavbar maxWidth="xl" position="sticky" className="bg-background">
+		<NextUINavbar maxWidth="xl" position="sticky" className="mb-16">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand className="gap-3 max-w-fit pr-2">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
@@ -112,7 +112,7 @@ export const Navbar = () => {
 					<Link isExternal href={siteConfig.links.github}>
 						<GithubIcon className="text-default-500" />
 					</Link>
-					<ThemeSwitch />
+					<Switcherlang />
 				</NavbarItem>
 				<NavbarItem className="hidden sm:flex">
 					<Button
@@ -138,7 +138,6 @@ export const Navbar = () => {
 				<Link isExternal href={siteConfig.links.github}>
 					<GithubIcon className="text-default-500" />
 				</Link>
-				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>
 

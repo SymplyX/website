@@ -1,14 +1,28 @@
 {
+  "common": {
+    "fr": "French",
+    "en": "English"
+  },
   "Home": {
     "title": "Build your",
     "title-2": "Server",
-    "description": "Symply offers the ultimate simplicity for creating unique servers. Unleash your creativity without constraints and build unforgettable game worlds in the blink of an eye.",
+    "description": "Symply offers you the ultimate simplicity to create unique servers. Unleash your creativity without constraints and build unforgettable game worlds in the blink of an eye.",
     "download": "Download",
     "modal": {
       "title": "Download",
-      "description": "You are about to download Symply,\nour beta version application designed to enhance your Minecraft experience.\n\nPlease note that Symply is currently in a testing phase, and we cannot guarantee support\nfor all issues encountered on your Minecraft servers.\n\nAs a development team, we encourage you to use Symply cautiously and understand that errors may occur. For more\ninformation about our beta version and to report issues, please\nrefer to our documentation.",
-      "download": "Download Anyway",
-      "discord": "Go to the discord"
+      "description": "<p>You are about to download Symply, our beta application designed to simplify the creation of Minecraft Bedrock servers.</p><skip></skip><p>As a development team, we encourage you to use Symply with caution and understand that errors may occur.</p><skip></skip><p>For more information on our beta version and to report issues, please refer to our documentation.</p>",
+      "button-download": {
+        "title": "Download Symply",
+        "tooltip": "You must confirm that you have read the information above in order to download Symply."
+      }
+    },
+    "card": {
+      "title": "Warning",
+      "description": "If you encounter issues on your Minecraft servers, please note that we are in a testing phase and cannot guarantee the resolution of all issues. However, we are here to assist you, so feel free to join our Discord server if you need assistance.",
+      "check": {
+        "no": "I have read carefully everything necessary to stay informed",
+        "yes": "I have confirmed"
+      }
     }
   }
 }

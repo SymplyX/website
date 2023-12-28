@@ -1,10 +1,28 @@
 import React, {useEffect, useState} from "react";
-import {Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure} from "@nextui-org/react";
+import {
+    Button,
+    Modal,
+    ModalBody,
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+    Card,
+    CardHeader,
+    Tooltip,
+    CardBody,
+    CardFooter,
+    Divider,
+    Checkbox,
+    useDisclosure,
+    Image
+} from "@nextui-org/react";
 import {useTranslations} from 'next-intl';
 import {MdOutlineFileDownload} from "react-icons/md";
 import {FaDiscord} from "react-icons/fa";
 import {FiDownload} from "react-icons/fi";
 import {siteConfig} from "@/config/site";
+import {useRouter} from "next/router";
+import { CiWarning } from "react-icons/ci";
 
 export default function HeroHome() {
     const t = useTranslations('Home');
@@ -13,55 +31,97 @@ export default function HeroHome() {
     const downloadLink = "https://github.com/SymplyX/Symply/releases";
 
     const [isClient, setIsClient] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
+    const handleCheckboxChange = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
+        setIsChecked(event.target.checked);
+    };
+
+    const {locale} = useRouter();
 
     useEffect(() => {
         setIsClient(true);
     }, []);
 
     return (
-        <section className="flex items-center flex-1">
+        <section className="flex items-center flex-1 relative">
             <div className="flex flex-col w-full">
-                <h1 className="text-5xl font-extrabold text-center lg:text-6xl 2xl:text-7xl">
+                <h1 className="text-5xl font-extrabold text-center text-white dark:text-white lg:text-6xl 2xl:text-7xl">
                     {t('title')}&nbsp;
                     <span
-                        className="text-transparent bg-clip-text bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-purple-200 via-purple-400 to-purple-800">
+                        className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-purple-600">
                       {t('title-2')}
-                  </span>
+                    </span>
                 </h1>
 
-                <p className="max-w-4xl mx-auto mt-9 text-sm text-center text-gray-700 dark:text-white md:text-xl">
+                <p className="max-w-4xl mx-auto mt-9 text-sm text-center text-white dark:text-white md:text-xl">
                     {t('description')}
                 </p>
-                <Button onPress={onOpen} className="max-w-3xl mx-auto mt-8 font-medium" color="success" variant="shadow" size="lg"
+                <Button onPress={onOpen} className="max-w-3xl mx-auto mt-8 font-medium" color="success" variant="shadow"
+                        size="lg"
                         startContent={<MdOutlineFileDownload/>}>
                     {t('download')}
                 </Button>
-                <Modal isOpen={isOpen} onClose={onClose}>
-                    <ModalContent>
-                        <ModalHeader className="flex flex-col gap-1 md:flex-row md:gap-2">
+                <Modal isOpen={isOpen} onClose={onClose} size="lg">
+                    <ModalContent className="w-full">
+                        <ModalHeader className="flex flex-col gap-1 md:flex-row md:gap-2 items-center justify-center">
                             {t('modal.title')}
-                            <span className="text-transparent bg-clip-text bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-purple-200 via-purple-400 to-purple-800"> Symply Beta</span>
+                            <span
+                                className="text-transparent bg-clip-text bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-purple-200 via-purple-400 to-purple-800"> Symply Beta</span>
                         </ModalHeader>
-                        <ModalBody>
-                            <p>{t('modal.description')}</p>
+                        <ModalBody className="w-full">
+                            <p>{t.rich('modal.description', {
+                                locale,
+                                p: (children) => <p>{children}</p>,
+                                skip: (children) => <br/>,
+                            })}</p>
+                            <Card className="w-full">
+                                <CardHeader className="flex gap-3">
+                                    <CiWarning color="yellow" size="30"/>
+                                    <div className="flex flex-col">
+                                        <p className="text-md">{t("card.title")}</p>
+                                    </div>
+                                </CardHeader>
+                                <Divider/>
+                                <CardBody>
+                                    <p>{t("card.description")}</p>
+                                    <Button
+                                        color="primary"
+                                        isIconOnly={true}
+                                        variant="faded"
+                                        size={"sm"}
+                                        onPress={() => isClient && window.open(siteConfig.links.discord, "_blank")}
+                                        startContent={<FaDiscord style={{fontSize: "2em"}}/>}
+                                        className={"mt-3 w-full"}
+                                    >
+                                    </Button>
+                                </CardBody>
+                                <CardFooter>
+                                    <Checkbox color="success" onChange={handleCheckboxChange}>
+                                        {isChecked ? t("card.check.yes") : t("card.check.no")}
+                                    </Checkbox>
+                                </CardFooter>
+                            </Card>
                         </ModalBody>
-                        <ModalFooter className="flex flex-col md:flex-row md:justify-between">
-                            <Button
-                                color="primary"
-                                variant="flat"
-                                onPress={() => isClient && window.open(siteConfig.links.discord, "_blank")}
-                                startContent={<FaDiscord className="m-1" style={{ fontSize: "2em" }} />}
+                        <ModalFooter className="flex flex-col md:flex-row md:justify-between w-full">
+                            <Tooltip
+                                content={t('modal.button-download.tooltip')}
+                                color="danger"
+                                showArrow={true}
+                                isDisabled={isChecked}
                             >
-                                {t('modal.discord')}
-                            </Button>
-                            <Button
-                                color="success"
-                                variant="shadow"
-                                onPress={() => isClient && window.open(downloadLink, "_blank")}
-                                startContent={<FiDownload className="m-1" style={{ fontSize: "2em" }} />}
-                            >
-                                {t('modal.download')}
-                            </Button>
+                                <div className="button-wrapper w-full">
+                                    <Button
+                                        color="success"
+                                        variant="shadow"
+                                        onPress={() => isClient && window.open(downloadLink, "_blank")}
+                                        startContent={<FiDownload style={{fontSize: "1.3em"}}/>}
+                                        isDisabled={!isChecked}
+                                        className={"w-full"}
+                                    >
+                                        {t('modal.button-download.title')}
+                                    </Button>
+                                </div>
+                            </Tooltip>
                         </ModalFooter>
                     </ModalContent>
                 </Modal>
