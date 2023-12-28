@@ -14,7 +14,7 @@ import {
     Divider,
     Checkbox,
     useDisclosure,
-    Image
+    Image, ModalProps
 } from "@nextui-org/react";
 import {useTranslations} from 'next-intl';
 import {MdOutlineFileDownload} from "react-icons/md";
@@ -32,6 +32,9 @@ export default function HeroHome() {
 
     const [isClient, setIsClient] = useState(false);
     const [isChecked, setIsChecked] = useState(false);
+
+    const [scrollBehavior] = React.useState<ModalProps["scrollBehavior"]>("outside");
+    const [backdrop] = React.useState('blur')
     const handleCheckboxChange = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
         setIsChecked(event.target.checked);
     };
@@ -61,12 +64,11 @@ export default function HeroHome() {
                         startContent={<MdOutlineFileDownload/>}>
                     {t('download')}
                 </Button>
-                <Modal isOpen={isOpen} onClose={onClose} size="lg">
-                    <ModalContent className="w-full">
+                <Modal isOpen={isOpen} backdrop={backdrop} onClose={onClose} scrollBehavior={scrollBehavior}>
+                    <ModalContent className="w-full md:max-w-screen-sm lg:max-w-screen-md mx-auto">
                         <ModalHeader className="flex flex-col gap-1 md:flex-row md:gap-2 items-center justify-center">
                             {t('modal.title')}
-                            <span
-                                className="text-transparent bg-clip-text bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-purple-200 via-purple-400 to-purple-800"> Symply Beta</span>
+                            <span className="text-transparent bg-clip-text bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-purple-200 via-purple-400 to-purple-800"> Symply Beta</span>
                         </ModalHeader>
                         <ModalBody className="w-full">
                             <p>{t.rich('modal.description', {
@@ -92,8 +94,7 @@ export default function HeroHome() {
                                         onPress={() => isClient && window.open(siteConfig.links.discord, "_blank")}
                                         startContent={<FaDiscord style={{fontSize: "2em"}}/>}
                                         className={"mt-3 w-full"}
-                                    >
-                                    </Button>
+                                    />
                                 </CardBody>
                                 <CardFooter>
                                     <Checkbox color="success" onChange={handleCheckboxChange}>
