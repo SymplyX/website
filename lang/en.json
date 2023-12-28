@@ -3,24 +3,42 @@
     "fr": "French",
     "en": "English"
   },
+  "Navbar": {
+    "start": {
+      "title": "Get Started",
+      "card": {
+        "look": "What to Look For",
+        "description": "Symply Additions"
+      },
+      "installation": {
+        "title": "Installation",
+        "description": "How would you like to install Symply? It's so symply, it's right here."
+      }
+    },
+    "docs": "Documentation",
+    "plugin": "Plugins",
+    "forums": "Forums",
+    "team": "Team",
+    "contributors": "Contributors"
+  },
   "Home": {
-    "title": "Build your",
+    "title": "Build Your",
     "title-2": "Server",
-    "description": "Symply offers you the ultimate simplicity to create unique servers. Unleash your creativity without constraints and build unforgettable game worlds in the blink of an eye.",
+    "description": "Symply offers you the ultimate simplicity to create unique servers. Unleash your creativity without constraints and build unforgettable gaming worlds in the blink of an eye.",
     "download": "Download",
     "modal": {
       "title": "Download",
-      "description": "<p>You are about to download Symply, our beta application designed to simplify the creation of Minecraft Bedrock servers.</p><skip></skip><p>As a development team, we encourage you to use Symply with caution and understand that errors may occur.</p><skip></skip><p>For more information on our beta version and to report issues, please refer to our documentation.</p>",
+      "description": "<p>You are about to download Symply, our beta application designed to simplify the creation of Minecraft Bedrock servers.</p><skip></skip><p>As a development team, we urge you to use Symply with caution and understand that errors may occur.</p><skip></skip><p> For more information about our beta version and to report issues, please refer to our documentation.</p>",
       "button-download": {
         "title": "Download Symply",
-        "tooltip": "You must confirm that you have read the information above in order to download Symply."
+        "tooltip": "You must confirm that you have read the above information to be able to download Symply."
       }
     },
     "card": {
       "title": "Warning",
-      "description": "If you encounter issues on your Minecraft servers, please note that we are in a testing phase and cannot guarantee the resolution of all issues. However, we are here to assist you, so feel free to join our Discord server if you need assistance.",
+      "description": "If you encounter issues on your Minecraft servers, please note that we are in a testing phase and cannot guarantee the resolution of all problems. However, we are here to help, so feel free to join our Discord server if you need assistance.",
       "check": {
-        "no": "I have read carefully everything necessary to stay informed",
+        "no": "I have carefully read everything necessary to stay informed",
         "yes": "I have confirmed"
       }
     }

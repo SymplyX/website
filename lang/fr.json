@@ -3,6 +3,24 @@
     "fr": "Français",
     "en": "Anglais"
   },
+  "Navbar": {
+    "start": {
+      "title": "Commencer",
+      "card": {
+        "look": "Ce qu'il faut voir",
+        "description": "Les ajouts de Symply"
+      },
+      "installation": {
+        "title": "L'installation",
+        "description": "Comment souhaitez-vous installer Symply ? C'est tellement symply, c'est ici"
+      }
+    },
+    "docs": "Documentation",
+    "plugin": "Plugins",
+    "forums": "Forums",
+    "team": "Équipe",
+    "contributors": "Contributeurs"
+  },
   "Home": {
     "title": "Construisez votre",
     "title-2": "Serveur",
@@ -18,7 +36,7 @@
     },
     "card": {
       "title": "Avertissement",
-      "description": "Si vous rencontrez des problèmes sur vos serveurs Minecraft, notez que nous sommes en phase de test et ne pouvons garantir la résolution de tous les problèmes. Cependant, nous sommes là pour vous aider, donc n'hésitez pas à rejoindre notre serveur Discord si vous avez besoin d'assistance.",
+      "description": "Si vous rencontrez des problèmes sur vos serveurs Minecraft, veuillez noter que nous sommes en phase de test et ne pouvons garantir la résolution de tous les problèmes. Cependant, nous sommes là pour vous aider, donc n'hésitez pas à rejoindre notre serveur Discord si vous avez besoin d'assistance.",
       "check": {
         "no": "J'ai lu attentivement tout ce qui était nécessaire pour me tenir informé",
         "yes": "J'ai confirmé"

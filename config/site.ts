@@ -5,23 +5,23 @@ export const siteConfig = {
 	description: "Symply is much more than just an enhanced version of PocketMine-MP. It's a platform brimming with exceptional innovations and add-ons for creating your own personalized Minecraft Bedrock server. With its advanced features, user-friendly interface and selection of fantastic add-ons, Symply gives you the power to shape a unique and captivating gaming environment for you and your players.",
 	navItems: [
     {
-      label: "Docs",
+      label: "docs",
       href: "/docs",
     },
     {
-      label: "Plugins",
+      label: "plugin",
       href: "/plugins",
     },
     {
-      label: "Forums",
+      label: "forums",
       href: "/forum",
     },
     {
-      label: "Team",
+      label: "team",
       href: "/team",
     },
 	{
-	  label: "Contribute",
+	  label: "contributors",
 	  href: "/contribute",
 	}
 	],
