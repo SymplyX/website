@@ -17,22 +17,24 @@ import {
 } from "@nextui-org/react";
 
 import {link as linkStyles} from "@nextui-org/theme";
-
+import {useTranslations} from 'next-intl';
 import {siteConfig} from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
 
 import {BiArrowToBottom, BiCube} from "react-icons/bi";
 
-import {ThemeSwitch} from "@/components/theme-switch";
 import {DiscordIcon, GithubIcon, HeartFilledIcon} from "@/components/icons";
 
 import React from "react";
 import {CardHeader} from "@nextui-org/card";
+import Switcherlang from "@/components/switcherlang";
 
 export const Navbar = () => {
+	const t = useTranslations('Navbar');
+
 	return (
-		<NextUINavbar maxWidth="xl" position="sticky" className="bg-background">
+		<NextUINavbar maxWidth="xl" position="sticky" className="mb-16">
 			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
 				<NavbarBrand className="gap-3 max-w-fit pr-2">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
@@ -54,7 +56,7 @@ export const Navbar = () => {
 						>
 							<BiCube
 								color="green"/>
-							Getting Started
+							{t("start.title")}
 						</Button>
 					</DropdownTrigger>
 					<DropdownMenu
@@ -68,8 +70,8 @@ export const Navbar = () => {
 						>
 							<Card className="col-span-12 sm:col-span-4 h-[300px]">
 								<CardHeader className="absolute z-10 top-1 flex-col !items-start">
-									<p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
-									<h4 className="text-white font-medium text-large">Symply&apos;s additions</h4>
+									<p className="text-tiny text-white/60 uppercase font-bold">{t("start.card.look")}</p>
+									<h4 className="text-white font-medium text-large">{t("start.card.description")}</h4>
 								</CardHeader>
 								<Image
 									removeWrapper
@@ -81,10 +83,10 @@ export const Navbar = () => {
 						</DropdownItem>
 						<DropdownItem
 							key="Installation"
-							description="How do you want to install Symply ? it's so symply, it's here"
+							description={t("start.installation.description")}
 							startContent={<BiArrowToBottom />}
 						>
-							Installation
+							{t("start.installation.title")}
 						</DropdownItem>
 					</DropdownMenu>
 				</Dropdown>
@@ -98,7 +100,7 @@ export const Navbar = () => {
 							)}
 							variant="light"
 						>
-							{item.label}
+							{t(item.label)}
 						</Button>
 					</NavbarItem>
 				))}
@@ -112,7 +114,7 @@ export const Navbar = () => {
 					<Link isExternal href={siteConfig.links.github}>
 						<GithubIcon className="text-default-500" />
 					</Link>
-					<ThemeSwitch />
+					<Switcherlang />
 				</NavbarItem>
 				<NavbarItem className="hidden sm:flex">
 					<Button
@@ -138,7 +140,6 @@ export const Navbar = () => {
 				<Link isExternal href={siteConfig.links.github}>
 					<GithubIcon className="text-default-500" />
 				</Link>
-				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>
 
