@@ -27,6 +27,8 @@ import { CiWarning } from "react-icons/ci";
 export default function HeroHome() {
     const t = useTranslations('Home');
 
+    type BackdropType = "blur" | "transparent" | "opaque";
+
     const { isOpen, onOpen, onClose } = useDisclosure();
     const downloadLink = "https://github.com/SymplyX/Symply/releases";
 
@@ -34,7 +36,7 @@ export default function HeroHome() {
     const [isChecked, setIsChecked] = useState(false);
 
     const [scrollBehavior] = React.useState<ModalProps["scrollBehavior"]>("outside");
-    const [backdrop] = React.useState('blur')
+    const [backdrop] = useState<BackdropType>("blur")
     const handleCheckboxChange = (event: { target: { checked: boolean | ((prevState: boolean) => boolean); }; }) => {
         setIsChecked(event.target.checked);
     };
